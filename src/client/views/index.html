@@ -3,11 +3,11 @@
     <head>
         <meta charset="utf-8">
         <title>Test</title>
-        <link rel="stylesheet" href="/styles/resets.css">
+       <!-- <link rel="stylesheet" href="/styles/resets.css">
         <link rel="stylesheet" href="/styles/base.css">
         <link rel="stylesheet" href="/styles/header.css">
         <link rel="stylesheet" href="/styles/form.css">
-        <link rel="stylesheet" href="/styles/footer.css">
+        <link rel="stylesheet" href="/styles/footer.css"> -->
     </head>
 
     <body>
@@ -16,6 +16,7 @@
             <div class="">
                 Logo
             </div>
+            <div class="title">Evaluate Text With NLP</div>
             <div class="">
                 navigation
             </div>
@@ -23,15 +24,27 @@
 
         <main>
             <section>
-                <form class="" onsubmit="return handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <!--<input id="name" type="text" name="input" value="" onblur="Client.onBlur()" placeholder="Name">
+                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)"> -->
+                    <label for="url">URL to the text</label>
+                    <input id="url" type="text" name="input" value="" placeholder="Enter URL">
+                    <div id="inv">Please enter a valid URL </div>
+                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">.
                 </form>
             </section>
 
-            <section>
+            <section id="results">
                 <strong>Form Results:</strong>
-                <div id="results"></div>
+                 <!--<div id="results"></div> -->
+                 <div id="polarity"></div>
+                 <div id="agreement"></div>
+                 <div id="subjectivity"></div>
+                 <div id="confidence"></div>
+                 <div id="irony"></div>
+                 <div id="text_snippet"></div>
+ 
+                 </ul>
             </section>
         </main>
 
