@@ -12,6 +12,11 @@ module.exports = {
         libraryTarget: 'var',
         library: 'Client'
     },
+    devServer: {
+        client: {
+          overlay: true,
+        },
+    },
     module: {
         rules: [
             {
